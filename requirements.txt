@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+psycopg
+telebot
+python-dotenv
+slowapi
