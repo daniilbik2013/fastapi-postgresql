@@ -1,7 +1,7 @@
 import telebot
 import psycopg
 import logging
-from filesbot.database import OrderRepository
+from Botdatabase import OrderRepository
 from dotenv import load_dotenv
 import os
 from filesbot.keyboards import main, main_menu, menu_back
