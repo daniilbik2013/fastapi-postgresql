@@ -22,8 +22,8 @@ A lead management system consisting of a Telegram bot (for clients) and a web da
 ## Installation and Setup
 
 1. Clone the repository:
-   git clone https://github.com/ehoh4867-beep/telegram-crm.git
-   cd telegram-crm
+   git clone https://github.com/ehoh4867-beep/fastapi-tg-crm.git
+   cd fastapi-tg-crm
 
 2. Install dependencies:
    pip install -r requirements.txt
