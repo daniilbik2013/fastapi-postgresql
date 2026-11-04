@@ -4,15 +4,11 @@ A lead management system consisting of a Telegram bot (for clients) and a web da
 
 ## Tech Stack
 
-- Backend: Python 3.13, FastAPI, Telebot.
-- Database: PostgreSQL (Neon cloud hosting).
+- Backend: Python 3.13 ![Python](https://img.shields.io/badge/Python-3.13-blue), FastAPI ![FastAPI](https://img.shields.io/badge/FastAPI-0.99-green), Telebot ![Telebot](https://img.shields.io/badge/Telebot-4.0-blue).
+- Database: PostgreSQL ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue) (Neon cloud hosting).
 - Database Driver: psycopg 3(tgbot), asyncpg
 - Frontend: HTML, CSS, Vanilla JS (Fetch API).
 - Security: slowapi (Rate Limiting).
-![Python](https://img.shields.io/badge/Python-3.13-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.99-green)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
-![Telebot](https://img.shields.io/badge/Telebot-4.0-blue)
 
 ## Features
 
