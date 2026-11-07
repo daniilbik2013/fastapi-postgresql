@@ -25,3 +25,6 @@ A lead management system consisting of a Telegram bot (for clients) and a web da
    ```bash
    git clone https://github.com/daniilbik2013/fastapi-postgresql.git
    cd fastapi-postgresql
+2. Run the bot (from the project root):
+   ```bash
+   python -m src.bot.bot
