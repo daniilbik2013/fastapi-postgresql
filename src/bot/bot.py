@@ -1,10 +1,10 @@
 import telebot
 import psycopg
 import logging
-from db.database import OrderRepository
+from .db.database import OrderRepository
 from dotenv import load_dotenv
 import os
-from keyboards.keyboards import main, main_menu, menu_back
+from .keyboards.keyboards import main, main_menu, menu_back
 
 logging.basicConfig(
 level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
@@ -26,7 +26,7 @@ def start(m):
     caption = 'Bot for leads and sending applications taking them into account in your personal web account.You can order such a bot from @duovss'
     markup = main() if (is_admin or status == 1) else main_menu()
     try:
-            with open('icons/horizontalweb.jpeg', 'rb') as photo:
+            with open('src/bot/icons/horizontalweb.jpeg', 'rb') as photo:
                 bot.send_photo(m.chat.id, photo=photo, caption=caption, reply_markup=markup)
     except FileNotFoundError:
             bot.send_message(m.chat.id, caption, reply_markup=markup)
@@ -42,7 +42,7 @@ def call(c):
 		text = 'Bot for leads and sending applications taking them into account in your personal web account.You can order such a bot from @duovss'
 		markup = main() if (is_admin or status == 1) else main_menu()
 		try:
-		          	with open('icons/horizontalweb.jpeg', 'rb') as photo:
+		          	with open('src/bot/icons/horizontalweb.jpeg', 'rb') as photo:
 		          		bot.send_photo(c.message.chat.id, photo=photo, caption=text, reply_markup=markup)
 		except FileNotFoundError:
 			bot.send_message(c.message.chat.id, text, reply_markup=markup)
