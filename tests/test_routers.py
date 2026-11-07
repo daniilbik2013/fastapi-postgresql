@@ -1,6 +1,7 @@
 from fastapi.testclient import TestClient
 from src.app.app import app, get_repo
 import pytest
+import asyncio
 
 class FakeRepo():
     def __init__(self):
@@ -8,10 +9,10 @@ class FakeRepo():
                         "Тестовый заказ", "status": 
                         "new"}]
 
-    def get_all(self):
+    async def get_all(self):
         return self.orders
 
-    def delete(self, order_id: int):
+    async def delete(self, order_id: int):
         for i, order in enumerate(self
 .orders):
             if order["id"] == order_id:
@@ -19,16 +20,16 @@ class FakeRepo():
                 return True
         return False
 
-    def get_by_id(self, order_id: int):
+    async def get_by_id(self, order_id: int):
         for order in self.orders:
             if order["id"] == order_id:
                 return order
         return None
 
-    def get_all_limit(self, limit: int):
+    async def get_all_limit(self, limit: int):
         return self.orders[:limit]
 
-    def update_status(self, order_id: int, new_status: str):
+    async def update_status(self, order_id: int, new_status: str):
         for order in self.orders:
             if order["id"] == order_id:
                 order["status"] = new_status

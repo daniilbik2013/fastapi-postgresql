@@ -6,7 +6,7 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from pydantic import BaseModel
 from contextlib import asynccontextmanager
-from db.database import OrderRepository
+from .db.database import OrderRepository
 from dotenv import load_dotenv
 import asyncpg
 import os
@@ -34,8 +34,8 @@ limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(lifespan=lifespan)
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
-app.mount("/static", StaticFiles(directory="static"), name="static")
-app.mount("/icons", StaticFiles(directory="icons"), name="icons")
+app.mount("/static", StaticFiles(directory="src/app/static"), name="static")
+app.mount("/icons", StaticFiles(directory="src/app/icons"), name="icons")
 
 class UpdateStatus(BaseModel):
         status: str
@@ -45,15 +45,15 @@ def get_repo() -> OrderRepository:
 
 @app.get('/')
 async def index_page():
-    return FileResponse("templates/index.html")
+    return FileResponse("src/app/templates/index.html")
 
 @app.get('/ui/orders')
 async def orders_page():
-    return FileResponse("templates/order.html")
+    return FileResponse("src/app/templates/order.html")
 
 @app.get('/ui/order/{order_id}')
 async def order_page(order_id: int):
-    return FileResponse("templates/settingOrders.html")
+    return FileResponse("src/app/templates/settingOrders.html")
 
 @app.get('/orders')
 @limiter.limit("60/minute")
