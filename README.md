@@ -4,40 +4,24 @@ A lead management system consisting of a Telegram bot (for clients) and a web da
 
 ## Tech Stack
 
-- Backend: Python 3.13 ![Python](https://img.shields.io/badge/Python-3.13-blue), FastAPI ![FastAPI](https://img.shields.io/badge/FastAPI-0.99-green), Telebot ![Telebot](https://img.shields.io/badge/Telebot-4.0-blue).
-- Database: PostgreSQL ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue) (Neon cloud hosting).
-- Database Driver: psycopg 3(tgbot), asyncpg
-- Frontend: HTML, CSS, Vanilla JS (Fetch API).
-- Security: slowapi (Rate Limiting).
+* Backend: Python 3.13 ![Python](https://img.shields.io/badge/Python-3.13-blue), FastAPI ![FastAPI](https://img.shields.io/badge/FastAPI-0.99-green), Telebot ![Telebot](https://img.shields.io/badge/Telebot-4.0-blue).
+* Database: PostgreSQL ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue) (Neon cloud hosting).
+* Database Driver: asyncpg, psycopg 3.
+* Frontend: HTML, CSS, Vanilla JS (Fetch API).
+* Security: slowapi (Rate Limiting).
 
 ## Features
 
-- Step-by-step form in the Telegram bot (name, phone, description).
-- Saving leads to a cloud database.
-- Web dashboard with a list of leads (limits, pagination).
-- Updating lead status (In progress, Done).
-- Deleting a lead.
-- Rate Limiting (DDoS and spam protection).
+* Step-by-step form in the Telegram bot (name, phone, description).
+* Saving leads to a cloud database.
+* Web dashboard with a list of leads (limits, pagination).
+* Updating lead status (In progress, Done).
+* Deleting a lead.
+* Rate Limiting (DDoS and spam protection).
 
 ## Installation and Setup
 
 1. Clone the repository:
-   git clone https://github.com/ehoh4867-beep/fastapi-tg-crm.git
-   cd fastapi-tg-crm
-
-2. Install dependencies:
-   pip install -r requirements.txt
-
-3. Create a .env file in the project root and add the following variables:
-   TOKEN_TELEGRAM=your_token
-   TELEGRAM_ID=your_id
-   DB_SETTING=postgresql://user:pass@host/db
-
-4. Run the bot:
-   python bot.py
-
-5. Run the web server:
-   python app.py
-
-## License
-MIT
+   ```bash
+   git clone https://github.com/daniilbik2013/fastapi-postgresql.git
+   cd fastapi-postgresql
