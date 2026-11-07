@@ -1,10 +1,10 @@
 import telebot
 import psycopg
 import logging
-from filesbot.database import OrderRepository
+from db.database import OrderRepository
 from dotenv import load_dotenv
 import os
-from filesbot.keyboards import main, main_menu, menu_back
+from keyboards.keyboards import main, main_menu, menu_back
 
 logging.basicConfig(
 level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")

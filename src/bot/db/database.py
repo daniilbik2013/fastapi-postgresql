@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import logging
 import os
 
+# TODO: перевести бота на aiogram + asyncpg когда появится доступ к компу/серверу
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
