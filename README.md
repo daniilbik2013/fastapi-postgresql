@@ -26,19 +26,19 @@ A lead management system consisting of a Telegram bot (for clients) and a web da
    git clone https://github.com/daniilbik2013/fastapi-postgresql.git
    cd fastapi-postgresql
 
-2. Run the bot (from the project root):
-   ```bash
-   python -m src.bot.bot
-
-3. Install dependencies:
+2. Install dependencies:
     ```bash
     pip install -r requirements.txt
 
-4. Create a .env file in the project root and add the following variables:
+3. Create a .env file in the project root and add the following variables:
     ```env
     TOKEN_TELEGRAM=your_token
     TELEGRAM_ID=your_id
     DB_SETTING=postgresql://user:pass@host/db
+
+4. Run the bot (from the project root):
+   ```bash
+   python -m src.bot.bot
 
 5. Run the web server (from the project root):
     ```bash
