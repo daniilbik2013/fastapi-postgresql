@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from app import app, get_repo
+from src.app.app import app, get_repo
 import pytest
 
 class FakeRepo():
